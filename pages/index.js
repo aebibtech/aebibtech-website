@@ -25,6 +25,9 @@ export default function Home({ allPostsData }) {
         <p>Hey, <strong><em>Aebibtech</em></strong> here! I develop Desktop and Web applications. This website will contain the projects that I worked on and some tech tips that I can share with you all.</p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>Projects</h2>
+      </section>
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Tech Tips</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map( ({ id, date, title }) => (
