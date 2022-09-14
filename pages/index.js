@@ -21,7 +21,7 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>👨‍💻 Software | 🌐 Web | 👘 Karate | 🎸 Guitars</p>
+        <p>👨‍💻 Software | 🌐 Web | 🥋 Karate | 🎸 Guitars</p>
         <p>Contact me on <a href="https://linkedin.com/in/paul-abib-camano" target="_blank">LinkedIn</a></p>
         <p>
           Hey, <strong><em>Aebibtech</em></strong> here! I develop Desktop and Web applications. This website will contain the projects that I worked on and some tech tips that I can share with you all <strong>(coming soon)</strong>.
