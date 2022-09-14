@@ -24,8 +24,7 @@ export default function Home({ allPostsData }) {
         <p>👨‍💻 Software | 🌐 Web | 👘 Karate | 🎸 Guitars</p>
         <p>Contact me on <a href="https://linkedin.com/in/paul-abib-camano" target="_blank">LinkedIn</a></p>
         <p>
-          (This is a sample website - you’ll be building a site like this in{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+          Hey, <strong><em>Aebibtech</em></strong> here! I develop Desktop and Web applications. This website will contain the projects that I worked on and some tech tips that I can share with you all <strong>(coming soon)</strong>.
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
