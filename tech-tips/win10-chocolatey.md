@@ -55,4 +55,4 @@ Example: `choco uninstall Steam`
     ![5](/img/win10-install-chocolatey/5.png)
 ***
 # Conclusion
-Using a package manager makes installing software easier. For more information regarding **Chocolatey**, visit **https://chocolatey.org/docs**.
+Using a package manager makes installing software easier. For more information regarding **Chocolatey**, visit **<https://chocolatey.org/docs>**.
