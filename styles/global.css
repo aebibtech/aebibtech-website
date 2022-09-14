@@ -25,3 +25,12 @@ img {
   max-width: 100%;
   display: block;
 }
+
+[data-theme='dark'] a {
+  color: #00cff3;
+  text-decoration: none;
+}
+
+p {
+  text-align: justify;
+}

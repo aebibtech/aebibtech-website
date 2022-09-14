@@ -5,11 +5,11 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
 const name = 'Aebibtech'
-export const siteTitle = 'Aebibtech Blog'
+export const siteTitle = 'Aebibtech'
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.container}>
+    <div className={`layout  ${styles.container}`}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
