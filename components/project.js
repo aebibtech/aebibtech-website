@@ -19,6 +19,7 @@ export default function Project({ name, description, image }) {
       }),
     [prefersDarkMode],
   );
+  const placeholder = "/images/placeholder.png"
   return (
     <ThemeProvider theme={theme}>
         <Card sx={{ maxWidth: 300 }}>
@@ -26,7 +27,7 @@ export default function Project({ name, description, image }) {
             <CardMedia
                 component="img"
                 height="140"
-                image={image}
+                image={image ? image : placeholder}
                 alt={name}
             />
             <CardContent>

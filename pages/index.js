@@ -31,7 +31,7 @@ export default function Home({ allPostsData }) {
         <h2 className={utilStyles.headingLg}>Projects</h2>
         <div className={utilStyles.projects}>
           {projects.map(({name, description, image}) => {
-            return name != "" ? <Project name={name} description={description} image={image} /> : ""
+            return name != "" ? <Project key={name} name={name} description={description} image={image} /> : ""
           })}
         </div>
       </section>
