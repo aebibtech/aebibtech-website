@@ -4,6 +4,8 @@ import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
+import Project from '../components/project'
+import getProjectsData from '../lib/projects'
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -15,6 +17,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
+  const projects = getProjectsData()
   return (
     <Layout home>
       <Head>
@@ -26,6 +29,11 @@ export default function Home({ allPostsData }) {
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Projects</h2>
+        <div className={utilStyles.projects}>
+          {projects.map(({name, description, image}) => {
+            return name != "" ? <Project name={name} description={description} image={image} /> : ""
+          })}
+        </div>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Tech Tips</h2>

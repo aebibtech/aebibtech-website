@@ -50,3 +50,9 @@
 .lightText {
   color: #666;
 }
+
+.projects {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
