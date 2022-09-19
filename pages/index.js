@@ -9,15 +9,16 @@ import getProjectsData from '../lib/projects'
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
+  const projects = getProjectsData();
   return {
     props : {
-      allPostsData
+      allPostsData: allPostsData,
+      projectsData: projects
     }
   }
 }
 
-export default function Home({ allPostsData }) {
-  const projects = getProjectsData()
+export default function Home({ allPostsData, projectsData }) {
   return (
     <Layout home>
       <Head>
@@ -30,10 +31,11 @@ export default function Home({ allPostsData }) {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Projects</h2>
         <div className={utilStyles.projects}>
-          {projects.map(({name, description, image}) => {
-            return name != "" ? <Project key={name} name={name} description={description} image={image} /> : ""
+          {projectsData.map(({name, description, image, repo}) => {
+            return name != "" ? <Project key={name} name={name} description={description} image={image} repo={repo} /> : ""
           })}
         </div>
+        <a href="https://github.com/aebibtech?tab=repositories" target="_blank">More . . .</a>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Tech Tips</h2>
