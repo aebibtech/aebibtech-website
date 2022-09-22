@@ -25,20 +25,20 @@ export default function Project({ name, description, image, repo }) {
     <ThemeProvider theme={theme}>
         <Card sx={{ maxWidth: 300 }}>
             <CardActionArea onClick={event => {window.open(repo)}}>
-            <CardMedia
-                component="img"
-                height="140"
-                image={image ? image : placeholder}
-                alt={name}
-            />
-            <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                 {name}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                {description}
-                </Typography>
-            </CardContent>
+              <CardMedia
+                  component="img"
+                  height="140"
+                  image={image ? image : placeholder}
+                  alt={name}
+              />
+              <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                  {name}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                  {description}
+                  </Typography>
+              </CardContent>
             </CardActionArea>
         </Card>
     </ThemeProvider>

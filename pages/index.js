@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Date from '../components/date'
 import Project from '../components/project'
 import getProjectsData from '../lib/projects'
+import { Button } from '@mui/material'
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -31,11 +32,13 @@ export default function Home({ allPostsData, projectsData }) {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Projects</h2>
         <div className={utilStyles.projects}>
-          {projectsData.map(({name, description, image, repo}) => {
-            return name != "" ? <Project key={name} name={name} description={description} image={image} repo={repo} /> : ""
+          {projectsData.filter(item => item.name != "").map(({name, description, image, repo}) => {
+            return <Project key={name} name={name} description={description} image={image} repo={repo} />
           })}
         </div>
-        <a href="https://github.com/aebibtech?tab=repositories" target="_blank">More . . .</a>
+        <div className={utilStyles.more_projects}>
+          <Button variant="text" href="https://github.com/aebibtech?tab=repositories" target="_blank" size="large">More . . .</Button>
+        </div>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Tech Tips</h2>

@@ -56,4 +56,9 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.more_projects {
+  text-align: center;
 }
