@@ -35,7 +35,8 @@ In this guide, I will be sharing the steps that I did in order to fix my sound i
 ***
 ## The Fix
 1. Open a terminal.
-1. Paste this command: `sudo sh -c "echo options snd-hda-intel model=thinkpad >> /etc/modprobe.d/sound-fixup.conf"`
+1. Paste this command:  
+`sudo sh -c "echo options snd-hda-intel model=headphone-mic-pin >> /etc/modprobe.d/sound-fixup.conf"`
 1. Press Enter.
 
 ## Regenerate the initramfs
