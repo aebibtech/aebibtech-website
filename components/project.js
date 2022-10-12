@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
 
 export default function Project({ name, description, image, repo }) {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
